@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select State and City</title>
+</head>
+<body>
+    <h2>Select Your Travel Location</h2>
+    <form action="booking.html">
+        <label>Select State:</label><br>
+        <select required>
+            <option>Karnataka</option>
+            <option>Maharashtra</option>
+            <option>Tamil Nadu</option>
+            <option>Kerala</option>
+            <option>Delhi</option>
+            <option>Uttar Pradesh</option>
+            <option>Gujarat</option>
+            <option>Rajasthan</option>
+            <option>West Bengal</option>
+            <option>Punjab</option>
+        </select><br><br>
+
+        <label>Select City:</label><br>
+        <select required>
+            <option>Bangalore</option>
+            <option>Mysore</option>
+            <option>Chennai</option>
+            <option>Mumbai</option>
+            <option>Delhi</option>
+            <!-- Add more dynamically -->
+        </select><br><br>
+
+        <button type="submit">Continue to Booking</button>
+    </form>
+</body>
+</html>

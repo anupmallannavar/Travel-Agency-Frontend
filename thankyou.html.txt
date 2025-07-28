@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thank You</title>
+</head>
+<body>
+    <h2>Thank You for Booking with Us!</h2>
+    <p>Your ride has been confirmed and will arrive in 15 minutes.</p>
+
+    <form>
+        <label>Rate Your Trip:</label><br>
+        <select required>
+            <option value="">Select</option>
+            <option>1 Star</option>
+            <option>2 Stars</option>
+            <option>3 Stars</option>
+            <option>4 Stars</option>
+            <option>5 Stars</option>
+        </select><br><br>
+        <button type="submit">Submit Rating</button>
+    </form>
+
+    <br>
+    <a href="index.html">Logout</a>
+</body>
+</html>

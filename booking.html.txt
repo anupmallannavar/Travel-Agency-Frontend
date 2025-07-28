@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Ride</title>
+</head>
+<body>
+    <h2>Trip Booking</h2>
+    <form action="thankyou.html">
+        <label>From Location:</label><br>
+        <input type="text" required><br><br>
+
+        <label>To Location:</label><br>
+        <input type="text" required><br><br>
+
+        <label>Select Driver:</label><br>
+        <select required>
+            <option>Arjun - KA01AB1234</option>
+            <option>Vikram - KA01BC2345</option>
+            <option>Ravi - KA01CD3456</option>
+            <option>Sunil - KA01DE4567</option>
+            <option>Manoj - KA01EF5678</option>
+        </select><br><br>
+
+        <p><b>Estimated fare: ₹225</b> (demo only)</p>
+        <button type="submit">Confirm Booking</button>
+    </form>
+</body>
+</html>
