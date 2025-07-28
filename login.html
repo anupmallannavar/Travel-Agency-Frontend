@@ -6,32 +6,17 @@
 </head>
 <body>
   <h2>Login</h2>
-  <form id="loginForm">
+  <form onsubmit="redirectToBooking(); return false;">
     <input type="text" id="username" placeholder="Username" required><br><br>
     <input type="password" id="password" placeholder="Password" required><br><br>
     <button type="submit">Login</button>
-    <p id="errorMsg" style="color:red;"></p>
   </form>
 
   <script>
-    const credentials = {
-      user1: "pass123",
-      admin: "admin123"
-    };
-
-    document.getElementById("loginForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-
-      const username = document.getElementById("username").value;
-      const password = document.getElementById("password").value;
-      const errorMsg = document.getElementById("errorMsg");
-
-      if (credentials[username] && credentials[username] === password) {
-        window.location.href = "booking.html";
-      } else {
-        errorMsg.textContent = "❌ Invalid username or password.";
-      }
-    });
+    function redirectToBooking() {
+      // Redirect directly to booking.html
+      window.location.href = "booking.html";
+    }
   </script>
 </body>
 </html>
