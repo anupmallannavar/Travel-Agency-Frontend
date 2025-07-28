@@ -14,22 +14,22 @@
   </form>
 
   <script>
+    // Predefined valid credentials
     const credentials = {
       user1: "pass123",
       admin: "admin123"
     };
 
+    // Login form submission handler
     document.getElementById("loginForm").addEventListener("submit", function(e) {
-      e.preventDefault();
+      e.preventDefault(); // Prevent page refresh
 
       const username = document.getElementById("username").value;
       const password = document.getElementById("password").value;
-
       const errorMsg = document.getElementById("errorMsg");
 
       if (credentials[username] && credentials[username] === password) {
-        // Success
-        window.location.href = "booking.html";
+        window.location.href = "booking.html"; // Redirect on success
       } else {
         errorMsg.textContent = "❌ Invalid username or password.";
       }
