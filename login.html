@@ -22,6 +22,7 @@
       const savedPass = localStorage.getItem("savedPassword");
 
       if (enteredUser === savedUser && enteredPass === savedPass) {
+        // ✅ Redirect to state selection, not booking!
         window.location.href = "state.html";
       } else {
         document.getElementById("errorMsg").textContent = "❌ Invalid username or password.";
