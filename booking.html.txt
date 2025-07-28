@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Book Ride</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h2>Trip Booking</h2>
