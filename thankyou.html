@@ -5,23 +5,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Thank You for Booking with Us!</h2>
-    <p>Your ride has been confirmed and will arrive in 15 minutes.</p>
+    <h2>🎉 Thank You for Booking!</h2>
 
-    <form>
-        <label>Rate Your Trip:</label><br>
-        <select required>
-            <option value="">Select</option>
-            <option>1 Star</option>
-            <option>2 Stars</option>
-            <option>3 Stars</option>
-            <option>4 Stars</option>
-            <option>5 Stars</option>
+    <p>Your trip is confirmed. We hope you have a safe journey!</p>
+
+    <form onsubmit="submitRating(); return false;">
+        <label for="rating">Please rate your experience:</label><br>
+        <select id="rating" required>
+            <option value="">-- Choose Rating --</option>
+            <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+            <option value="4">⭐⭐⭐⭐ Good</option>
+            <option value="3">⭐⭐⭐ Average</option>
+            <option value="2">⭐⭐ Poor</option>
+            <option value="1">⭐ Bad</option>
         </select><br><br>
+
         <button type="submit">Submit Rating</button>
     </form>
 
-    <br>
-    <a href="index.html">Logout</a>
+    <p id="thankMsg" style="margin-top: 20px;"></p>
+
+    <script>
+        function submitRating() {
+            const rating = document.getElementById("rating").value;
+            document.getElementById("thankMsg").innerHTML =
+                `✅ Thank you for rating us ${rating} star(s)!<br><a href='index.html'>Return to Home</a>`;
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trip Bill</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Trip Billing</h2>
+
+    <div id="tripDetails">
+        <p><strong>From:</strong> <span id="fromLoc"></span></p>
+        <p><strong>To:</strong> <span id="toLoc"></span></p>
+    </div>
+
+    <form onsubmit="calculateFare(); return false;">
+        <label for="distance">Enter Distance (in km):</label><br>
+        <input type="number" id="distance" required><br><br>
+
+        <button type="submit">Calculate Fare</button>
+    </form>
+
+    <div id="billResult" style="display:none; margin-top:20px;">
+        <p><strong>Total Fare: ₹<span id="fareAmount"></span></strong></p>
+        <a href="thankyou.html"><button>Proceed to Thank You</button></a>
+    </div>
+
+    <script>
+        // Get query parameters
+        const params = new URLSearchParams(window.location.search);
+        const from = params.get("from") || "Not provided";
+        const to = params.get("to") || "Not provided";
+
+        document.getElementById("fromLoc").textContent = from;
+        document.getElementById("toLoc").textContent = to;
+
+        function calculateFare() {
+            const km = parseFloat(document.getElementById("distance").value);
+            const ratePerKm = 15;
+            const totalFare = km * ratePerKm;
+
+            document.getElementById("fareAmount").textContent = totalFare.toFixed(2);
+            document.getElementById("billResult").style.display = "block";
+        }
+    </script>
+</body>
+</html>
