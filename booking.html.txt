@@ -6,15 +6,16 @@
 </head>
 <body>
     <h2>Trip Booking</h2>
-    <form action="thankyou.html">
-        <label>From Location:</label><br>
-        <input type="text" required><br><br>
+    <form action="thankyou.html" method="get">
+        <label for="from">From Location:</label><br>
+        <input type="text" id="from" name="from" placeholder="Enter starting city" required><br><br>
 
-        <label>To Location:</label><br>
-        <input type="text" required><br><br>
+        <label for="to">To Location:</label><br>
+        <input type="text" id="to" name="to" placeholder="Enter destination city" required><br><br>
 
-        <label>Select Driver:</label><br>
-        <select required>
+        <label for="driver">Select Driver:</label><br>
+        <select id="driver" name="driver" required>
+            <option value="">-- Choose a Driver --</option>
             <option>Arjun - KA01AB1234</option>
             <option>Vikram - KA01BC2345</option>
             <option>Ravi - KA01CD3456</option>
@@ -22,8 +23,13 @@
             <option>Manoj - KA01EF5678</option>
         </select><br><br>
 
-        <p><b>Estimated fare: ₹225</b> (demo only)</p>
+        <p><strong>Estimated Fare: ₹225</strong> <small>(demo only)</small></p>
+
         <button type="submit">Confirm Booking</button>
     </form>
+
+    <p style="text-align:center; margin-top: 20px;">
+        <a href="home.html">← Back to City Selection</a>
+    </p>
 </body>
 </html>
