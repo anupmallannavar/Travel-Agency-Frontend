@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Select City</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Select a City in <span id="stateName"></span></h2>
+  <select id="citySelect">
+    <option>Bangalore</option>
+    <option>Mysore</option>
+    <option>Mangalore</option>
+    <option>Hubli</option>
+    <option>Belgaum</option>
+    <option>Udupi</option>
+    <option>Dharwad</option>
+    <option>Bellary</option>
+    <option>Shimoga</option>
+    <option>Tumkur</option>
+  </select><br><br>
+  <button onclick="goToBooking()">Continue</button>
+
+  <script>
+    document.getElementById("stateName").textContent = localStorage.getItem("selectedState");
+
+    function goToBooking() {
+      const city = document.getElementById("citySelect").value;
+      localStorage.setItem("selectedCity", city);
+      window.location.href = "booking.html";
+    }
+  </script>
+</body>
+</html>
